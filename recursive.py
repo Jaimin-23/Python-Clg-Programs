@@ -1,22 +1,31 @@
-#Recursive function- function that call itself
-'''
+#recursive function-function that call itself
 #factorial
-def fact(num):  #num=5 num=4 num=3 num=2 num=1 num=0= 5*4*3*2*1
+'''def fact(num):
     if(num<0):
         return "not possible"
-    elif(num==0 or num==1):
+    elif(num==0):
         return 1
     else:
         return num*fact(num-1)
-           
-val=int(input("Enter no.:"))
+val=5
 result=fact(val)
-print(f"Factorial of {val} is : {result}")
+print(f"Factorial of {val} is: {result}")
 '''
 
-#fibonnaci series
-def fibo(num):
+#recursive function-function that call itself
+#factorial
+def fib(num):
     if(num<0):
         return "not possible"
-    elif(num==0 or num==1):
+    elif(num==0):
         return 1
+    else:
+        a=0
+        b=1
+        for _ in range(2,num+1):
+            a=b
+            b=a+b
+    
+val=55
+result=fib(val)
+print(f"fibonacci of {val} is: {result}")
